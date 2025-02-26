@@ -1,18 +1,8 @@
-
-
-<!-- src/components/Footer.svelte -->
 <script>
+  import Newsletter from "./Newsletter.svelte";
 </script>
 
 <footer>
   <p>&copy; 2025 The Kinetic Alphabet. All rights reserved.</p>
+  <Newsletter />
 </footer>
-
-<style>
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background: #222;
-    color: white;
-  }
-</style>

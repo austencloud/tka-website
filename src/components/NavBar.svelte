@@ -1,31 +1,28 @@
 <script>
-  import { onMount } from 'svelte';
-  let links = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' }
-  ];
+  import SocialLinks from "./SocialLinks.svelte";
+
 </script>
 
 <nav class="navbar">
-  {#each links as link}
-    <a href={link.href}>{link.name}</a>
-  {/each}
+  <img src="/logo.png" alt="The Kinetic Alphabet" class="logo" />
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <SocialLinks />
 </nav>
 
 <style>
   .navbar {
     display: flex;
-    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem;
     background: #333;
     color: white;
   }
-  a {
-    color: white;
-    text-decoration: none;
+  .logo {
+    height: 50px;
   }
 </style>
-
-
-
